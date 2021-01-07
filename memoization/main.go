@@ -7,46 +7,46 @@ import (
 
 func main() {
 	fmt.Println("Fibonacci:")
-	fmt.Println(fib(6, map[int]int{})) // 8
+	fmt.Println(fib(6, map[int]int{}))  // 8
 	fmt.Println(fib(50, map[int]int{})) // 12586269025
 
 	fmt.Println("Grid Traveler:")
-	fmt.Println(gridTraveler(2, 3, map[string]int{})) // 3
+	fmt.Println(gridTraveler(2, 3, map[string]int{}))   // 3
 	fmt.Println(gridTraveler(18, 18, map[string]int{})) // 2333606220
 
 	fmt.Println("Can Sum:")
-	fmt.Println(canSum(7, []int{2, 3}, map[int]bool{})) // true
+	fmt.Println(canSum(7, []int{2, 3}, map[int]bool{}))    // true
 	fmt.Println(canSum(300, []int{7, 14}, map[int]bool{})) // false
 
 	fmt.Println("How Sum:")
-	fmt.Println(howSum(7, []int{2, 3}, map[int][]int{})) // [3 2 2]
+	fmt.Println(howSum(7, []int{2, 3}, map[int][]int{}))       // [3 2 2]
 	fmt.Println(howSum(7, []int{5, 3, 4, 7}, map[int][]int{})) // [4 3]
 	fmt.Println(howSum(7, []int{2, 4}, map[int][]int{}))
 	fmt.Println(howSum(8, []int{2, 3, 5}, map[int][]int{}))
 	fmt.Println(howSum(300, []int{7, 14}, map[int][]int{}))
 
 	fmt.Println("Best Sum:")
-	fmt.Println(bestSum(7, []int{5, 3, 4, 7}, map[int][]int{})) // [7]
-	fmt.Println(bestSum(8, []int{2, 3, 5}, map[int][]int{})) // [5, 3]
-	fmt.Println(bestSum(8, []int{1, 4, 5}, map[int][]int{})) // [4, 4]
+	fmt.Println(bestSum(7, []int{5, 3, 4, 7}, map[int][]int{}))    // [7]
+	fmt.Println(bestSum(8, []int{2, 3, 5}, map[int][]int{}))       // [5, 3]
+	fmt.Println(bestSum(8, []int{1, 4, 5}, map[int][]int{}))       // [4, 4]
 	fmt.Println(bestSum(100, []int{1, 2, 5, 25}, map[int][]int{})) // [25, 25, 25, 25]
 
 	fmt.Println("Can Construct:")
-	fmt.Println(canConstruct("abcdef", []string{"ab", "abc", "cd", "def", "abcd"}, map[string]bool{})) // true
-	fmt.Println(canConstruct("skateboard", []string{"bo", "rd", "ate", "t", "ska", "sk", "boar"}, map[string]bool{})) // false
-	fmt.Println(canConstruct("enterapotentpot", []string{"a", "p", "ent", "enter", "ot", "o", "t"}, map[string]bool{})) // true
+	fmt.Println(canConstruct("abcdef", []string{"ab", "abc", "cd", "def", "abcd"}, map[string]bool{}))                                              // true
+	fmt.Println(canConstruct("skateboard", []string{"bo", "rd", "ate", "t", "ska", "sk", "boar"}, map[string]bool{}))                               // false
+	fmt.Println(canConstruct("enterapotentpot", []string{"a", "p", "ent", "enter", "ot", "o", "t"}, map[string]bool{}))                             // true
 	fmt.Println(canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", []string{"e", "ee", "eee", "eeee", "eeeee", "eeeeee"}, map[string]bool{})) // false
 
 	fmt.Println("Count Construct:")
-	fmt.Println(countConstruct("purple", []string{"purp", "p", "ur", "le", "purpl"}, map[string]int{})) // 2
-	fmt.Println(countConstruct("abcdef", []string{"ab", "abc", "cd", "def", "abcd"}, map[string]int{})) // 1
-	fmt.Println(countConstruct("skateboard", []string{"bo", "rd", "ate", "t", "ska", "sk", "boar"}, map[string]int{})) // 0
-	fmt.Println(countConstruct("enterapotentpot", []string{"a", "p", "ent", "enter", "ot", "o", "t"}, map[string]int{})) // 4
+	fmt.Println(countConstruct("purple", []string{"purp", "p", "ur", "le", "purpl"}, map[string]int{}))                                              // 2
+	fmt.Println(countConstruct("abcdef", []string{"ab", "abc", "cd", "def", "abcd"}, map[string]int{}))                                              // 1
+	fmt.Println(countConstruct("skateboard", []string{"bo", "rd", "ate", "t", "ska", "sk", "boar"}, map[string]int{}))                               // 0
+	fmt.Println(countConstruct("enterapotentpot", []string{"a", "p", "ent", "enter", "ot", "o", "t"}, map[string]int{}))                             // 4
 	fmt.Println(countConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", []string{"e", "ee", "eee", "eeee", "eeeee", "eeeeee"}, map[string]int{})) // 0
 
 	fmt.Println("All Construct:")
-	fmt.Println(allConstruct("purple", []string{"purp", "p", "ur", "le", "purpl"}, map[string][][]string{})) // [[purp le] [p ur p le]]
-	fmt.Println(allConstruct("abcdef", []string{"ab", "abc", "cd", "def", "abcd", "ef", "c"}, map[string][][]string{})) //[[ab cd ef] [ab c def] [abc def] [abcd ef]]
+	fmt.Println(allConstruct("purple", []string{"purp", "p", "ur", "le", "purpl"}, map[string][][]string{}))                // [[purp le] [p ur p le]]
+	fmt.Println(allConstruct("abcdef", []string{"ab", "abc", "cd", "def", "abcd", "ef", "c"}, map[string][][]string{}))     //[[ab cd ef] [ab c def] [abc def] [abcd ef]]
 	fmt.Println(allConstruct("skateboard", []string{"bo", "rd", "ate", "t", "ska", "sk", "boar"}, map[string][][]string{})) // []
 }
 
@@ -89,7 +89,6 @@ func allConstruct(target string, wordBank []string, memo map[string][][]string) 
 func insertString(array []string, value string, index int) []string {
 	return append(array[:index], append([]string{value}, array[index:]...)...)
 }
-
 
 func countConstruct(target string, wordBank []string, memo map[string]int) int {
 	r, found := memo[target]
@@ -231,7 +230,7 @@ func gridTraveler(m int, n int, memo map[string]int) int {
 		return 0
 	}
 
-	memo[key] = gridTraveler(m - 1, n, memo) + gridTraveler(m, n - 1, memo)
+	memo[key] = gridTraveler(m-1, n, memo) + gridTraveler(m, n-1, memo)
 	return memo[key]
 }
 
